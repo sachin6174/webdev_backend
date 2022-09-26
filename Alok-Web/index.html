@@ -6,27 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         body{
             background-color: aquamarine;
         }
         textarea{
-            background-color: brown;
+            background-color: rgb(209, 162, 162);
         }
 
         #submit{
-            background-color: aqua;
+            background-color: rgb(34, 197, 56);
+        }
+        p{
+            background-color: rgb(212, 219, 201);
+            border: solid black;
+            height:50px
         }
 
     </style>
 </head>
 <body>
     <div>
-        <textarea name="" id="" cols="70" rows="10">
-        </textarea>
+        <textarea  id="txt" cols="100" rows="10">alok chauhan is a boy</textarea>
         <br>
-        <input type="text"> 
-        <input type="submit" id="submit">
+        <input id="query" type="text"> 
+        <input id ="btn" type="button" value="Check">
+        <p></p>
+        <!-- <p>myans1</p>
+        <p>myans2</p>
+        <p>myans3</p> -->
 
     </div>
+
+    <script>
+        let box=document.getElementById('txt');
+        let btn=document.getElementById('btn');
+        console.log(box.value);
+
+        // element1.value="bunty chauhan is a boy"
+
+        /*
+            fucnction ke ander function decleration
+            arrow function
+        */
+        // (a,b)=>{
+
+        // }
+        let query=document.getElementById('query')
+
+        btn.addEventListener('click',()=>{
+            // box.value="dfjgdsfshgfhjdsghgsdfhjhdsf"
+            // console.log(box.value);
+            // console.log(query.value);
+            let mystr=box.value;
+            let que=query.value;
+            
+            // kmp o(n)
+            //
+            let mila=false;
+            for(let i=0;i<mystr.length-que.length+1;i++){
+                let localmilgaya=true;
+                let index=i;
+                for(let j=0;j<que.length;j++){
+                    if(mystr[i+j]!==que[j]){
+                        localmilgaya=false;
+                        break;
+                    }
+                }
+                if(localmilgaya===true){
+
+                    mila=true;
+                    let p=document.getElementsByTagName('p')
+                    p[0].innerHTML=`You Query Found at ${i}`;
+                    break;
+                }
+            }
+            if(mila===false){
+                let p=document.getElementsByTagName('p');
+                p[0].innerHTML="You Query is  Not Found";
+            }
+
+
+
+        });
+        
+        
+
+
+
+    </script>
 </body>
 </html>
