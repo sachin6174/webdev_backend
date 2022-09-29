@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // js a dynamically typed lang
+        let a="sachin";
+        a=12;
+        a=[1,2,3,4]
+        a={
+            a:2,
+            b:3
+        }
+        a=console
+        console.log(a)
+
+        // let and const is block level scope
+        // a block means a curly brace pair
+        // let is reassigned const is not resssigned
+        {   
+            const ram="raj";
+            // ram="sita" // this will give error
+            let sachin=12;
+            sachin="bunty"
+            console.log(sachin)// it will work
+        }
+        // console.log(sachin) // it will not work
+        // console.log(ram) // it will not work
+
+        {
+            var bihar="bihar";// it is global and also redeclerable
+        }
+        console.log(bihar);
+
+        // var has function level scope other wise treated as global and var is also redeclaerable and reassignable
+        
+        function myfun(){
+            var up="lakhnow";
+        }
+
+        // console.log(up) // it will not work as defined in a function
+        // var ka function levele scope hita hai
+
+        //declaerable:
+        let k=1;
+        // let k=5;// it will give error
+
+
+        var chd="mohali";
+        var chd="pujab";// it will not give error 
+        chd="modi"
+        // it is redeclearable as well as reassign(update)
+
+        // dont use var anywhere now 
+        
+
+
+    </script>
+</body>
+</html>
