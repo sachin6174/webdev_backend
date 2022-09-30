@@ -110,7 +110,7 @@
 
 
 
-    let arr=['!','@','#','$','%','^','&','*','(',')']
+    let arr=['!','@','#','$','%','^','&','*',' ']
     let ans=""
 
     let btn1=document.getElementById('btn1')
@@ -121,17 +121,17 @@
         
         
         for(let i=0;i<mystr.length;i++){
-            let matched=true
+            let matched=false
                 for(let j=0;j<arr.length;j++){
-                    if(mystr.charAt(i)!==arr[j]){
-                        matched= false
+                    if(mystr.Atchar(i)===arr[j]){
+                        matched=true
                         break;
                     }
                 }
 
 
-                if(matched===true){
-                    ans+=mystr.charAt(i)
+                if(matched===false){
+                    ans+=mystr.Atchar(i)
                 }
 
         }
