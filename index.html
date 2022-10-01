@@ -7,26 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>sachin</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vitae aliquid hic eveniet culpa nesciunt illo ut recusandae, autem dicta deserunt illum a dolore, velit soluta? Quae laborum mollitia suscipit!
-    </p>
-    <form action="/" method="post" style="background-color:red ;">
-        <label>fname</label>
-        <input type="text" name="fname">
-        <br>
-        <label>lname</label>
-        <input type="text" name="lname">
-        <br>
-        <label>email</label>
-        <input type="email" name="email">
-        <br>
-        <label>dob</label>
-        <input type="date" name="dob">
-        <br>
-        <button>send</button>
-    </form>
+    
+    <button onClick="window.location.reload(); console.log(`pagereloded`)">sachin</button>
+    <!-- // inline js -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse atque sequi incidunt cupiditate earum enim vero iusto sit odio facilis minima perferendis hic ratione rerum totam est corporis maiores perspiciatis at officiis, impedit alias consectetur quasi. Sint amet, repudiandae, reprehenderit distinctio ut dolor sit aspernatur similique esse porro, expedita quasi.</p>
 
-    <script src="basic.js"></script>
+    <p>dgasjhghjsdgfhasdf</p>
+
+    <div id="bunty">
+
+    </div>
+
+    <h1><p>sachin</p></h1>
+
+    <script>
+        let a=5;
+        let element=document.getElementsByTagName('h1');
+        console.dir(element[0].innerHTML)
+        element[0].innerHTML="<b>bunty</b>";
+
+        let element1=document.getElementById('bunty')
+        element1.innerHTML="bunty is a boy"
+
+
+    </script>
+    <!-- //internal js -->
+
+    <!-- <script src="dom.js">  </script> -->
+    <!-- // external js -->
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        let i=0;
+        let j=0;
+        let k=0;
+        function col(){
+            for(;i<16;i++){
+                    for(;j<16;j++){
+                        for(;k<16;k++){
+                            return `rgb(${i},${j},${k})`;
+                        }
+                        k=0;
+                    }
+                    
+            }
+        
+        }
+
+        let body=document.getElementsByTagName('body')[0]
+        setInterval(()=>{
+        //     for(;i<16;i++){
+        //         for(;j<16;j++){
+        //             for(;k<16;k++){
+        //                 body.style.backgroundColor=`rgb(${i},${j},${k})`;
+        //                 console.log(`rgb(${i},${j},${k})`);
+        //             }
+        //             k=0;
+        //         }
+        //         j=0;
+        //     }
+        //    i =0
+        console.log(col());
+        },100)
+       
+    </script>
+</body>
+</html>
