@@ -8,8 +8,10 @@ let sachin={
 }
 
 
-console.log(JSON.stringify(sachin));
-// console.log(sachin.fname);
-// console.log(sachin.lname);
-// console.log(sachin.age);
-// console.log(sachin.getdetails());
+// console.log(JSON.stringify(sachin));
+console.log(sachin.fname);
+console.log(sachin.lname);
+console.log(sachin.age);
+sachin.getdetails();
+
+console.log(sachin.fname,sachin.age,sachin.lname,sachin.getdetails);

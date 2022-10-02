@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="cancel" >cancel</button>
+    <div id="sachin" class="sachin" data-alok="bihar" style=""></div>
+    <!-- if we want to set our custom attribite to a html element the we have to attach 'data-' with our property and we can access that property using element.dataset.propertyname; -->
+
+
+    <script>
+        
+        // setTimeout clearTimeout setInterval clearInterval
+        //1000 ->1s
+        let div=document.getElementById('sachin')
+        console.dir(div.dataset.alok)
+        div.style.background="red"
+        let btn=document.getElementById('cancel')
+        let clicked=false;
+        btn.addEventListener('click',()=>{
+            clicked=true;
+        })
+
+        // let id=setTimeout(()=>{
+        //     // div.innerText=`<h1>sachin<h1>`;
+        //     div.innerHTML=`<h1>sachin<h1>`;
+        // },3000);
+
+        // if(clicked){
+        //     console.log(clicked);
+        //     clearInterval(id);
+        // }
+        let i=0;
+        let siid=setInterval(()=>{
+            // console.log(i++)
+            div.innerHTML=i++;
+            if(i==10){
+                clearInterval(siid);
+            }
+        },500)
+        
+
+
+    </script>
+</body>
+</html>
