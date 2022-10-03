@@ -195,13 +195,9 @@
       let id = setInterval(() => {
         para2.style.width = `${j++}%`;
         if (j == 101) {
+          para2.style.width = "0%"
           clearInterval(id);
-        }
-      }, 10);
-
-  
-
-          let id2 = setInterval(() => {
+           let id2 = setInterval(() => {
 
             para.innerHTML += txt[i++]
             if(i == txt.length){
@@ -215,6 +211,12 @@
             color.innerHTML = `<h1>${col}</h1>`;
             time.innerHTML = `<h1>${getTime()}</h1>`;
         },100)
+        }
+      }, 10);
+
+  
+
+         
     
     </script>
   </body>
