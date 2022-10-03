@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        background-color: rgb(189, 171, 206);
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input id="input" type="number" value="10" />
+      <button>Generate Prime No.</button>
+    </div>
+    <table></table>
+
+    <script>
+      let table = document.getElementsByTagName("table")[0];
+      // let tr=`<tr><td  class="box">1</td><td class="box">2</td><td class="box">3</td><td class="box">4</td><td class="box">5</td></tr>`;
+      // for(let i=0;i<1000;i++){
+      //     table.innerHTML+=tr;// it is complex in nature
+      //     // string concatination are always complex in time
+      // }
+      function prime(n) {
+        n = Number(n)
+        let primes = new Array(n + 1);
+        for (let i = 0; i < n + 1; i++) {
+          primes[i] = true;
+        }
+        primes[0] = false;
+        primes[1] = false;
+
+        for (let i = 2; i <= parseInt(n / 2); i++) {
+          let x = 2;
+          for (let j = i * i; j <= n && !primes[i]; ) {
+            primes[j] = false;
+            x++;
+            j = i * x;
+          }
+        }
+
+        return primes;
+      }
+      let input = document.getElementById("input");
+
+      let button = document.getElementsByTagName("button")[0];
+
+      button.addEventListener("click", () => {
+        console.log("I got clicked")
+        let arr = prime(Number(input));
+        let numberOfrows = parseInt(arr.length / 25);
+
+        let onlyprime = new Array();
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i]) {
+            onlyprime.push(i);
+          }
+        }
+        let k = 0;
+
+        for (let i = 0; i < numberOfrows; i++) {
+          let tr = document.createElement("tr");
+          for (let j = 0; j < 25; j++) {
+            let td = document.createElement("td");
+            td.innerHTML = 1
+            tr.appendChild(td);
+            k++;
+          }
+          table.appendChild(tr);
+        }
+
+        let p = document.createElement("p");
+        let body = document.getElementsByTagName("body")[0];
+        body.appendChild(p);
+      });
+    </script>
+  </body>
+</html>
