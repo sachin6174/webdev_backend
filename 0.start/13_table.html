@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            background-color: rgb(189, 171, 206);
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td >1</td>
+            <td >2</td>
+            <td >3</td>
+            <td >4</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+            <td >5</td>
+        </tr>
+    </table>
+
+    <script>
+        let table=document.getElementsByTagName('table')[0]
+        // let tr=`<tr><td  class="box">1</td><td class="box">2</td><td class="box">3</td><td class="box">4</td><td class="box">5</td></tr>`;
+        // for(let i=0;i<1000;i++){
+        //     table.innerHTML+=tr;// it is complex in nature
+        //     // string concatination are always complex in time
+        // }
+
+
+        for(let i=0;i<1000;i++){
+            let tr=document.createElement('tr');
+            for(let j=0;j<25;j++){
+                let td=document.createElement('td');
+                td.innerHTML='1';
+                tr.appendChild(td); 
+            }
+            table.appendChild(tr);
+
+        }
+
+        let p=document.createElement('p');
+        let body=document.getElementsByTagName('body')[0]
+        body.appendChild(p);
+    </script>
+</body>
+</html>
