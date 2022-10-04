@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="text">Kindly Type your text:</label>
+        <textarea name="text-box" id="text" cols="70" rows="10" placeholder="You can type anything here..."></textarea>
+        <input type="text" name="searchValue" id="searchValue" />
+        <input type="submit" id="search" value="Search" />
+        <input type="submit" value="Modify" id="modify" />
+        <p></p>
+    </div>
+    <script>
+        let innerText = document.getElementById("text").value
+        let searchButton = document.getElementById("search")
+        let modify = document.getElementById("Modify")
+        let searchValue = document.getElementById("searchValue").value
+        let result = document.getElementsByTagName('p')
+        searchButton.addEventListener('click', () => {
+            let ans = ""
+            for (let i = 0; i < innerText.length - searchValue.length + 1; i++) {
+                const element = innerText.charAt(i);
+                let index = i
+                let bool = true
+                for (let j = 0; j < searchValue.length; j++) {
+                    if (innerText.charAt(i + j) !== searchValue.charAt(j)) {
+                        bool = false
+                        break;
+                    }
+                }
+                if (bool === true) {
+                    console.log("index " + index)
+                    ans += index + " "
+                }
+            }
+            console.log(ans)
+            // result[0].value = ans
+        })
+    </script>
+</body>
+
+</html>

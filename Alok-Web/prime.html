@@ -74,30 +74,37 @@
       let numberOfrows = Math.ceil(onlyprime.length / 25);
 
 
-      console.log(numberOfrows)
+      // console.log(numberOfrows)
 
-
+      let k = 0
       for (let i = 0; i < numberOfrows; i++) {
         let tr = document.createElement("tr");
         for (let j = 0; j < 25; j++) {
           let td = document.createElement("td");
-          td.innerHTML = 0;
+          td.innerHTML = onlyprime[k++];
           tr.appendChild(td);
+          if(k == numberOfrows.length){
+            break;
+          }
+
         }
         table.appendChild(tr);
-      }
-      let k = 0;
-      let allTds = document.getElementsByTagName('td');
-      allTds = document.getElementsByTagName('td');
-      console.log(allTds)
-      for (let i = 0; i < allTds.length; i++) {
-        if (k == onlyprime.length) {
+        if(k == numberOfrows.length){
           break;
         }
-        console.log(allTds[i]);
-        allTds[i].innerHTML = onlyprime[k++];
-
       }
+      // let k = 0;
+      // let allTds = document.getElementsByTagName('td');
+      // allTds = document.getElementsByTagName('td');
+      // console.log(allTds)
+      // for (let i = 0; i < allTds.length; i++) {
+      //   if (k == onlyprime.length) {
+      //     break;
+      //   }
+      //   // console.log(allTds[i]);
+      //   allTds[i].innerHTML = onlyprime[k++];
+
+      // }
 
       // let p = document.createElement("p");
       // let body = document.getElementsByTagName("body")[0];
