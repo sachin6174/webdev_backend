@@ -7,11 +7,13 @@ let sachin={
     }
 }
 
+sachin["pno"]=283964;
 
 // console.log(JSON.stringify(sachin));
-console.log(sachin.fname);
-console.log(sachin.lname);
-console.log(sachin.age);
-sachin.getdetails();
+// console.log(sachin.fname);
+// console.log(sachin.lname);
+// console.log(sachin.age);
+// sachin.getdetails();
 
-console.log(sachin.fname,sachin.age,sachin.lname,sachin.getdetails);
+// console.log(sachin.fname,sachin.age,sachin.lname,sachin.getdetails);
+console.log(sachin);

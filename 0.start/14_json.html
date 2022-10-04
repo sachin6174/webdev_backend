@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let sachin = {
+      fname: "sachin",
+      lname: "kumar",
+      age: 21,
+      getdetails: function () {
+        console.log(`person name is ${this.fname} and age is ${this.age}.`)
+      }
+    }
+    //json ->javascript object notation (js object ka ek roop hta hai)[string of js object]
+
+    fetch('https://murmuring-mesa-55795.herokuapp.com/trng?num1=1000&num2=1555')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+
+    let str = JSON.stringify(sachin)
+    console.log(JSON.parse(str))
+// console.log(window)
+  </script>
+</body>
+
+</html>
+
+<!-- https://www.google.com/search?q=sachin+tendulkar&rlz=1C1CHBF_enIN1024IN1024&oq=sachin+tendulkar&aqs=chrome.0.0i271j46i433i512j0i433i512j0i131i433i512j0i512j0i433i512l3j46i131i433i512j0i512.43718j1j4&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyCggCEAAYsQMYgAQyDQgDEAAYgwEYsQMYgAQyBwgEEAAYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyCggHEAAYsQMYgAQyDQgIEC4YgwEYsQMYgAQyBwgJEAAYgATSAQk0MzcxOGoxajSoAgCwAgA&sourceid=chrome&ie=UTF-8 -->
