@@ -34,3 +34,5 @@ function getTime(){
     let time_string=`Time is : ${hour_string}:${min_string}:${sec_string}:${am_pm}`
     return time_string;
 }
+
+console.log(getTime());
