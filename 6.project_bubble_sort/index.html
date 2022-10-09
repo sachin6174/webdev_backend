@@ -182,14 +182,14 @@
             box.appendChild(span);
             clr.push(getColor());
         }
-        let k=3;
+        
         let span=document.getElementsByTagName('span')
         for(let i=0;i<arr.length;i++){
             span[i].style.height=`${arr[i]}px`;
             span[i].innerHTML=arr[i];
             span[i].style.backgroundColor=clr[i];
         }
-
+        let k=3;
         for(let i = 0; i < n-1; i++){ 
                 for(let j=0;j<n-1-i;j++){
                     function fun(){
