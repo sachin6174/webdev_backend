@@ -20,6 +20,15 @@
             text-align: center;
             /* background-color: rgb(194, 100, 164); */
         }
+        .bars2{
+            display: inline-block;
+            height: 100px;
+            width: 20px;
+            margin: 5px;
+            font-size: 12px;
+            text-align: center;
+            /* background-color: rgb(194, 100, 164); */
+        }
     </style>
 </head>
 <body>
@@ -27,11 +36,12 @@
         <source src="1.mp3" type="audio/mpeg">
     </audio>
    
-
+    <h1>Bubble Sort</h1>
     <div class="box">
     </div>
 
     <script>
+        "use strict";
          let x = document.getElementById("myAudio");
         // function playAudio() {
         //     x.play();
@@ -40,7 +50,7 @@
         // function pauseAudio() {
         //     x.pause();
         // }
-        x.play();
+        // x.play();
         function getColor(){
             let rand1=Math.floor(Math.random()*16);
             let rand2=Math.floor(Math.random()*16);
@@ -48,7 +58,7 @@
             let rand4=Math.floor(Math.random()*16);
             let rand5=Math.floor(Math.random()*16);
             let rand6=Math.floor(Math.random()*16);
-            console.log(rand1,rand2,rand3,rand4,rand5,rand6);
+            // console.log(rand1,rand2,rand3,rand4,rand5,rand6);
 
             if(rand1==10){
                 rand1='A';
@@ -172,18 +182,21 @@
             return mycolor;
         }
 
-        let arr=[100,90,80,70,60,50,40,30,20,10,11,55,9,23,6,79,23,78,23,93,50,40,30,20,10];
+        let arr=[100,90,80,70,60,50,40,30,20,10,11,55,9,23,6,79,23,78,23,93,50,40,30,20,10,13,36,78,24,85,29,24];
         let clr=[];
+        let clr2=[];
         let box=document.getElementsByClassName('box')[0];
         let n=arr.length;
         for(let i=0;i<n;i++){
             let span=document.createElement('span');
             span.setAttribute('class','bars');
             box.appendChild(span);
-            clr.push(getColor());
+            let colk=getColor();
+            clr.push(colk);
+            clr2.push(colk);
         }
         
-        let span=document.getElementsByTagName('span')
+        let span=document.getElementsByClassName('bars')
         for(let i=0;i<arr.length;i++){
             span[i].style.height=`${arr[i]}px`;
             span[i].innerHTML=arr[i];
@@ -213,9 +226,71 @@
                     }
                     setTimeout(()=>{
                         fun();
-                    },((k++)*200))  
+                    },((k++)*100))  
                 }
          }
+
+
+         let p=document.createElement('p');
+         p.style.height='10px';
+         p.style.backgroundColor="black"
+         document.body.appendChild(p)
+
+
+         let box2=document.createElement('div')
+         box2.setAttribute('class','box')
+         document.body.appendChild(box2)
+         
+
+         // selection
+
+         let arr2=[100,90,80,70,60,50,40,30,20,10,11,55,9,23,6,79,23,78,23,93,50,40,30,20,10,13,36,78,24,85,29,24];
+         for(let i=0;i<n;i++){
+            let span2=document.createElement('span');
+            span2.setAttribute('class','bars2');
+            box2.appendChild(span2);
+        }
+
+        let span2=document.getElementsByClassName('bars2')
+
+        for(let i=0;i<arr.length;i++){
+            span2[i].style.height=`${arr2[i]}px`;
+            span2[i].innerHTML=arr2[i];
+            span2[i].style.backgroundColor=clr2[i];
+        }
+        let title=document.createElement('h1')
+        title.innerHTML="Selection Sort"
+        document.body.appendChild(title)
+        let ss=3;
+         for(let i=0;i<n-1;i++){
+            for(let j=n-1;j>=i+1;j--){
+                    function myfu(){
+                        if(arr2[j-1]>arr2[j]){
+                            span2[j].style.height=`${arr2[j-1]}px`
+                            span2[j-1].style.height=`${arr2[j]}px`
+                            span2[j].innerHTML=arr2[j-1]
+                            span2[j-1].innerHTML=arr2[j]
+
+
+                            let temp=arr2[j];
+                            arr2[j]=arr2[j-1];
+                            arr2[j-1]=temp; 
+
+                            span2[j].style.backgroundColor=clr2[j-1]
+                            span2[j-1].style.backgroundColor=clr2[j]
+
+                            let colr=clr2[j];
+                            clr2[j]=clr2[j-1];
+                            clr2[j-1]=colr;    
+                        }
+                }
+                setTimeout(()=>{
+                      myfu()
+                    },(ss++)*100)
+            }
+                
+    }
+
     </script>
 </body>
 </html>
