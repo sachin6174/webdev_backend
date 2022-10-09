@@ -11,6 +11,7 @@
 
 
     <script>
+        "use strict";
 
         function volume(radius){
             let vol=[];
@@ -50,6 +51,28 @@
         console.log(hemisphere(radius))
 
 
+        arr=[1,2,3,4,5,6,7]
+
+
+
+        function myfilter(arr,logic){
+
+            arr1=[]
+
+
+            for(let i=0;i<arr.length;i++){
+               mycallback()
+            }
+
+            return arr1
+
+        }
+
+        function mycallback(element){
+            return element>5;
+        }
+
+        myfilter(arr,mycallback);
         
 
 
