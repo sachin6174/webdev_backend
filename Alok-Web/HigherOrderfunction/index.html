@@ -9,8 +9,8 @@
 <body>
     <script>
  function calculateSurfaceArea(r){
-            // 4 pi r ^ 3
-            return 3 * calculateVolume(r)
+            // 4 pi r ^ 2
+            return 3 * calculateVolume(r) /r
         }
         function calculateVolume(r){
             // 4/3 pi r ^ 3
@@ -26,8 +26,9 @@
         let volume = new Array()
         let volumeHemi = new Array()
         for(let i = 0;i < radius.length;i++){
-            let volumeOf = calculateVolume(radius[i])
-            let surfaceAreaOf = volumeOf * 3
+            let r = radius[i]
+            let volumeOf = calculateVolume(r)
+            let surfaceAreaOf = (volumeOf * 3) / r
             let hemiVol = volumeOf / 2
 
             surfaceArea.push(surfaceAreaOf)
