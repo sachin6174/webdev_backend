@@ -40,7 +40,7 @@
         // function pauseAudio() {
         //     x.pause();
         // }
-        x.play();
+        // x.play();
         function getColor(){
             let rand1=Math.floor(Math.random()*16);
             let rand2=Math.floor(Math.random()*16);
@@ -48,7 +48,7 @@
             let rand4=Math.floor(Math.random()*16);
             let rand5=Math.floor(Math.random()*16);
             let rand6=Math.floor(Math.random()*16);
-            console.log(rand1,rand2,rand3,rand4,rand5,rand6);
+            //console.log(rand1,rand2,rand3,rand4,rand5,rand6);
 
             if(rand1==10){
                 rand1='A';
@@ -182,40 +182,54 @@
             box.appendChild(span);
             clr.push(getColor());
         }
-        
+        // let k=3;
         let span=document.getElementsByTagName('span')
         for(let i=0;i<arr.length;i++){
             span[i].style.height=`${arr[i]}px`;
             span[i].innerHTML=arr[i];
             span[i].style.backgroundColor=clr[i];
         }
-        let k=3;
-        for(let i = 0; i < n-1; i++){ 
-                for(let j=0;j<n-1-i;j++){
-                    function fun(){
-                        
-                        if(arr[j]>arr[j+1]){
-                            span[j].style.height=`${arr[j+1]}px`;
-                            span[j].innerHTML=arr[j+1];
-                            span[j+1].style.height=`${arr[j]}px`;
-                            span[j+1].innerHTML=arr[j]; 
-                            
-                            let temp=arr[j];
-                            arr[j]=arr[j+1];
-                            arr[j+1]=temp;
-                            //clor swap
-                            span[j].style.backgroundColor=clr[j+1];
-                            span[j+1].style.backgroundColor=clr[j];
-                            let colr=clr[j];
-                            clr[j]=clr[j+1];
-                            clr[j+1]=colr;
-                        }
-                    }
-                    setTimeout(()=>{
-                        fun();
-                    },((k++)*200))  
+
+        let k=1;
+        for(let i=0;i<n-1;i++){
+            for(let j=n-1;j>=i+1;j--){
+               
+
+                    function myfu(){
+                        if(arr[j]<arr[j-1]){
+
+                        snap[j].style.height=`${arr[j-1]}px`
+                    snap[j-1].style.height=`${arr[j]}px`
+                    snap[j].innerHTML=arr[j-1]
+                    snap[j-1].innerHTML=arr[j]
+                    snap[j].style.backgroundColor=clr[j-1]
+                    snap[j-1].style.backgroundColor=clr[j]
+                    let temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
+                    let colr=clr[j];
+                    clr[j]=clr[j+1];
+                    clr[j+1]=colr;
+                    
+                
+                    
                 }
-         }
+                }
+            }
+                setTimeout(()=>{
+                      myfu()
+                    },(k++)*100)
+
+
+
+
+
+               
+
+            }
+        }
+        console.log(arr)
+      
     </script>
 </body>
 </html>
