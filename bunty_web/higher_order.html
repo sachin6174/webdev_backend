@@ -82,10 +82,13 @@
         let output =myfilter(arr,mycallback);
         console.log(output)
         
-        let myredarray=arr.reduce((element,accumator)=>{
-            
-            },)  
+        let myredarray=arr.reduce((element,x)=>{
+                if(element>x){
+                    x=element
+                }
+            })  
 
+        console.log(myredarray)
      
 
     </script>
