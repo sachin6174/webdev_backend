@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        box model:
+            1.content box(area for text content)
+            2.Padding (gap between border and content box)
+            3.Border (matlab border)
+            4.margin (gap between two elements)
+                //margin overlap is followd during apply of margin
+
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border:10px solid rgb(182, 70, 89);
+            /*css short hands property*/
+            padding: 5px;
+            /*padding is distance between content box and border*/
+            /* margin: 20px; */
+            
+        }
+        .box1{
+            margin: 20px;
+        }
+        .box2{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        class="box1"
+    </div>
+    <div class="box2">
+        class="box2"
+    </div>
+</body>
+</html>
