@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input">Get Factorial of a Number</label>
+    <br>
+    <br>
+    <input id="num" type="text" name="input" value="0">
+    <br>
+    <br>
+    <button id="id">Get-Factorial-Here</button>
+
+    <div id="value">
+    <script>
+       function sum( num1, num2){
+    let sum;
+    letcarry=0;
+
+    for(let i=num1.size()-1,j=num2.size()-1 ;i>=0||j>=0;i--,j--){
+        if(i>=0){
+            carry+=(num1[i]-'0');
+        }
+        if(j>=0){
+            carry+=(num2[j]-'0');
+        }
+        let digit=carry%10+'0';
+        sum.push(digit);
+        carry=carry/10;
+    }
+    if(carry>0){
+        sum.push(carry+'0');
+    }
+
+    reverse(sum.begin(),sum.end());
+    return sum;
+}
+
+function multiply( p1, p2){
+    let back0=0;
+    let ans="";
+    for(let i=p2.length-1;i>=0;i--){
+
+        // let digit=p2[i]-'0';
+        let digit=p2[i].codePointAt(0)-'0'.codePointAt(0);
+
+        let num="";
+
+        let copyback0=back0;  
+        while(copyback0--){
+            num.push('0');
+        }
+        back0++;
+
+        let carry=0;  
+        for(let j=p1.size()-1;j>=0;j--){
+            let mul=(digit*(p1[j].codePointAt(0)-'0'.codePointAt(0))+carry;
+            num.push(mul%10+'0');
+            carry=mul/10;
+        }
+        
+        if(carry){
+            num.push(carry+'0');
+        }
+        reverse(num.begin(),num.end());
+
+        ans=sum(ans,num);
+      
+    }
+    return ans;
+}
+
+function fact(n){
+    let fact="1";
+    for(leti=1;i<=n;i++){
+       
+        let numstr=String(i);
+      
+        fact=multiply(numstr,fact);
+    }
+    return fact;
+}
+
+    let btn=document.getElementById('id')
+    btn.addEventListener('click',()=>{
+    let n=document.getElementById('num').value
+    console.log(n)
+    })
+    </script>
+    </div>
+</body>
+</html>
