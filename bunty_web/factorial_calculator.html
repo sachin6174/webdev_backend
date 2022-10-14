@@ -5,29 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Factorial Calculator</title>
+    <link rel="icon" type="image/x-icon" href="exclamation-mark.png">
     <style>
         #value{
             display: block;
             margin: 20px;
-            color: blanchedalmond;
+            color: darksalmon;
             background: black;
             padding: 30px;
-            height:200px;
+            height:500px;
             text-overflow: clip;
             word-break: break-word;
+            
+        }
+        body{
+            background-color: grey;
+        }
+
+        .flexcontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        label{
+            color: rgb(217, 211, 211);
+            font-style: normal;
+            margin: 5px;
+            font-size: 25px;
+        }
+        #num{
+            width: 200px;
+            height: 30px;
+            font-size: 25px;
+            text-align: center;
+            margin: 10px;
+        }
+        #id{
+            background-color: lightseagreen;
+            font-size: 20px;
+            border-radius: 7px;
+            margin: 15px;
         }
     </style>
 </head>
 
 <body>
-    <label for="input">Get Factorial of a Number</label>
-    <br>
-    <br>
-    <input id="num" type="text" name="input" value="100">
-    <br>
-    <br>
-    <button id="id">Get-Factorial-Here</button>
+    
+    <div class="flexcontainer">
+        <label for="input">Get Factorial of a Number</label>
+
+        <input id="num" type="text" name="input" value="100">
+        
+        <button id="id">Get-Factorial-Here</button>
+
+    </div>
+    
 
     <div id="value"></div>
         <script>
