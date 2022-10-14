@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>              
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas{
+            border: 5px solid hotpink ;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Canvas</h1>
+    <div>
+        <canvas></canvas>
+    </div>
+
+
+    <script>
+        "use strict";
+        let canvas=document.getElementsByTagName('canvas')[0];
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+
+        let context=canvas.getContext('2d');
+        // context.fillRect(10,30,100,200);
+        canvas.addEventListener('click',(event)=>{
+            // console.log(event)
+            context.fillRect(event.x,event.y,10,10);
+        })
+
+        for(let i=0;i<500;i+=2){
+            context.fillRect(50,i,2,2);
+        }
+        console.dir(canvas)
+
+    </script>
+</body>
+</html>

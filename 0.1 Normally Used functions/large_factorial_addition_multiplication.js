@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #value{
-            display: block;
-            margin: 20px;
-            color: blanchedalmond;
-            background: black;
-            padding: 30px;
-            height:200px;
-            text-overflow: clip;
-            word-break: break-word;
-        }
-    </style>
-</head>
-
-<body>
-    <label for="input">Get Factorial of a Number</label>
-    <br>
-    <br>
-    <input id="num" type="text" name="input" value="100">
-    <br>
-    <br>
-    <button id="id">Get-Factorial-Here</button>
-
-    <div id="value"></div>
-        <script>
 
             function sum(num1, num2) {
                 let sum="";
@@ -43,7 +10,6 @@
                     if (j >= 0) {
                         carry = carry +Number(num2[j]);
                     }
-                    // console.log(carry)
                     let digit = String(carry % 10);
                     sum+=digit;
                     carry = parseInt(carry / 10);
@@ -101,25 +67,8 @@
             function fact(n) {
                 let fact = "1";
                 for (let i = 1; i <= n; i++) {
-
                     let numstr = String(i);
-                    // console.log(numstr)
-
                     fact = multiply(numstr, fact);
                 }
                 return fact;
             }
-
-            // console.log(sum("12345","21311221"));
-            
-            let div=document.getElementById("value");
-            let btn=document.getElementById('id')
-            btn.addEventListener('click',()=>{
-            let n=document.getElementById('num').value; 
-                    div.innerHTML=fact(Number(n))
-            })
-        </script>
-    </div>
-</body>
-
-</html>
