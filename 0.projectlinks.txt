@@ -4,6 +4,8 @@ https://chrome.google.com/webstore/detail/html-tree-generator/dlbbmhhaadfnbbdnja
 
 // tree of html generator
 
+//useful extension
+usernamehw.errorlens
 
 https://alokkr016.github.io/WeatherApp/
 
