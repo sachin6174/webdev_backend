@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas{
+            border: 5px solid hotpink ;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas></canvas>
+    </div>
+    <script>
+        let canvas=document.getElementsByTagName('canvas')[0];
+        // canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+
+        let toggle=0;
+        let context=canvas.getContext('2d');
+        for(let i=0;i<window.innerHeight;i+=10){
+            if((i/10)%2==0){
+                toggle=0;
+                for(let j=0;j<window.innerWidth;j+=10){
+                    if(toggle%2==0){
+                        context.fillStyle ="black";
+                    }else{
+                        context.fillStyle ="white";
+                    }
+                    context.fillRect(i,j,10,10);
+                    toggle++;
+
+                }
+            }else{
+                toggle=1;
+                for(let j=0;j<window.innerWidth;j+=10){
+                    if(toggle%2==0){
+                        context.fillStyle ="black";
+                    }else{
+                        context.fillStyle ="white";
+                    }
+                    context.fillRect(i,j,10,10);
+                    toggle++;
+                }
+            }
+                
+            
+        }
+    </script>
+</body>
+</html>

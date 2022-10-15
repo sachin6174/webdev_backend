@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // premitive and reference:
+        /*
+            primritive datatypes:(memory is allocate in stack)
+                1.String
+                2.Number
+                3.Boolean
+                4.null
+                5.udefined
+                6.Symbol  
+            
+            reference:(memory is allocate in stack and heap)
+            if created using new keyword then memory is allocated in heap else in stack
+                1.object
+                2.array
+                3.Date
+                4.function
+                and more
+
+
+         */   
+        let a="sachin";// string using double quotation mark
+        a='bunty'// string using single quotation mark
+        a="1234"
+        a=`kumar` // string using backticks quotation mark
+        a=`sacjn
+        sadasdk
+        dsfsdfasdasd
+        asdasd` // enter can be aso used in backticks
+        console.log(a)
+
+        let mystr= new String("hola");
+        //created inheap
+        // when we create a object usig new keyword then console.log print in object for rather then data form
+        // creating string in heap
+        console.log(mystr)
+
+        let num=1234;
+        num=1.245;
+        console.log(num);
+
+        let mynum=new Number(12345);
+
+        console.log(mynum);
+
+        // any type of data is concatinated with string 
+        let numb=13;
+        console.log("myfav num is "+numb)
+
+
+
+
+    </script>
+</body>
+</html>

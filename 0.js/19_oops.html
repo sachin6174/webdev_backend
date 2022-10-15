@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //object can be created without class
+        // object is key value pair
+        // every thing in js is a object
+        // symbol
+
+                // 1.String
+                // 2.Number
+                // 3.Boolean
+                // 4.null
+                // 5.udefined
+                // 6.Symbol
+                // 1.object
+                // 2.array
+                // 3.Date
+                // 4.function
+        // let sachin={
+        //     // key and value pair can be anything
+        //     19:"hola",
+        //     "my quote":"helloworld", // string can also be use as key
+        //     // we can also use space in keyif we use string as key
+        //     fname:"sachin",
+        //     lname:"kumar",
+        //     marks:[77.4,78.8,95],
+        //     family:{
+        //             mother:"sunita devi",
+        //             father:"sunil kumar",
+        //             brither:"prince"
+        //         },
+        //     rno:1902219,
+        //     getDetails:function (){
+        //         return `name is ${this.fname} ${this.lname}`;
+        //     },
+        //     // married:false
+        // }
+        // sachin["married"]=false;
+        // // we can append any key value pair externally
+        // console.table(sachin)
+        // console.log(sachin.getDetails());
+        // console.log(sachin.family.father);
+
+
+        //constructor function:(it is class for us)
+        //dry 
+        function Worker(name,id,marks){
+            this.id=id;
+            this.name=name;
+            this.marks=marks;
+            this.mydetail=function(){
+                console.log(this.name+" id is "+this.id);
+            }
+        }
+
+        //class and objects use pascal casing
+        let bunty=new Worker("bunty",12,[1,2,3]);
+        let alok=new Worker("alok",13);
+        let sachin=new Worker("aschin",13);
+
+        // let a=new Array();
+        // console.table(bunty)
+        // console.table(alok)
+        console.log(alok.mydetail)
+        
+        // console.log(helo)//ReferenceError: helo is not defined
+        
+
+
+    </script>
+</body>
+</html>
