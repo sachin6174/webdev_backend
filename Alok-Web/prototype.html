@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function myFilter(logic) {
+        let ans = new Array();
+        for (let i = 0; i < this.length; i++) {
+          if (logic(this[i])) {
+            ans.push(this[i]);
+          }
+        }
+        return ans;
+      }
+      //polyfill : it is a term for relecating inbuilt function
+      //for example create a polyfill of filter function
+      //created my own filter
+      let arr = [5, 7, 8, 2, 1, 12, 14];
+    //   arr.__proto__.myFilter = myFilter;
+      console.log(arr);
+    //   console.log(arr.myFilter((element) => element > 5));
+    </script>
+  </body>
+</html>
