@@ -1,64 +1,99 @@
-//https://expressjs.com/en/starter/hello-world.html
-//https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc
-/*
-Multiline
-comment
-*/
-// js behave like python but syntax is like c++
+const express = require("express");
 
-
-
-const express = require('express');
-const { dirname } = require('path');
-const app = express()// return object
-
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
+const bodyparser = require("body-parser");
+const app = express();
 const port = 5000
 
-//camelcase
-//sachinKumarIsAGoodBoy
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+  
 
-//snake casing or chain casing
-//sachin-is-a-good-boy
-
-//pascal casing
-//SachinKumarIsAGoodBoy
-
-app.get('/', function(req,res){
-    res.sendFile(__dirname+"/index.html");
-}  );
-
-app.post('/', function(req,res){
-
-    let sachin={
-      fname:req.body.fname,
-      lname:req.body.lname,
-      email:req.body.email,
-      date:req.body.dob,
-    }
-
-    res.json(sachin);
-});
-
-
-
-app.get('/sachin', function(req,res){
-    res.send("sachin");
-}  );
-
-
-
-app.get('/bunty/college', function(req,res){
-  console.log(req.query.fname,req.query.age);
-    res.send(req.query.fname+req.query.age);
-}  );
-app.get('/bunty/home', (req,res)=>{
-    res.send("/bunty/home");
-}  );
-// http://localhost:5000/bunty/college
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(` app listening on ${port} port`)
 })
 
-// https://api.openweathermap.org/data/2.5/weather?q=chandigarh&unit=metric&appid=44c9a010fc226d7fe3f5823247fada87
+
+
+
+
+
+
+
+
+/*
+
+            function sum(num1, num2) {
+                let sum="";
+                let carry = 0;
+
+                for (let i = num1.length - 1, j = num2.length - 1; i >= 0 || j >= 0; i--, j--) {
+                    if (i >= 0) {
+                        carry =carry+ Number(num1[i]);
+                    }
+                    if (j >= 0) {
+                        carry = carry +Number(num2[j]);
+                    }
+                    let digit = String(carry % 10);
+                    sum+=digit;
+                    carry = parseInt(carry / 10);
+                    
+                }
+                if (carry > 0) {
+                    sum+=String(carry);
+                } 
+                let revnum="";
+                for(let i=sum.length-1;i>=0;i--){
+                    revnum+=sum[i];
+                }
+                sum=revnum;
+
+                return sum;
+            }
+
+            function multiply(p1, p2) {
+                let back0 = 0;
+                let ans = "";
+                for (let i = p2.length - 1; i >= 0; i--) {
+                    let digit = Number(p2[i]);
+
+                    let num = "";
+
+                    let copyback0 = back0;
+                    while (copyback0--) {
+                        num+="0";
+                    }
+                    back0++;
+
+                    let carry = 0;
+                    for (let j = p1.length - 1; j >= 0; j--) {
+                        let mul = (digit * Number(p1[j])) + carry;
+                        num+=String(mul % 10 );
+                        carry = parseInt(mul / 10);
+                    }
+
+                    if (carry) {
+                        num+=(String(carry));
+                    }
+
+                    let revnum="";
+                    for(let i=num.length-1;i>=0;i--){
+                        revnum+=num[i];
+                    }
+                    num=revnum;
+
+                    ans = sum(ans, num);
+
+                }
+                return ans;
+            }
+
+            function fact(n) {
+                let fact = "1";
+                for (let i = 1; i <= n; i++) {
+                    let numstr = String(i);
+                    fact = multiply(numstr, fact);
+                }
+                return fact;
+            }
+*/

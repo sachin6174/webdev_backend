@@ -4,3 +4,4 @@
 *.zip
 *.rar
 *.7zip
+/4.node-server/node_modules
