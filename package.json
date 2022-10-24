@@ -1,6 +1,11 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.20.1",
     "express": "^4.18.2"
+=======
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+>>>>>>> d5c5d62f33a8c7080c10e4ae975db0e2641da7a9
   }
 }
