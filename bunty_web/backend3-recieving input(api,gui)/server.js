@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const bodyparser=require('body-parser')
+
 app.use(bodyparser.urlencoded({ extended: true }));
 const port = 3000
 //receiving data in the form of api query , in request.query.object
