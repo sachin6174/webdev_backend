@@ -48,7 +48,7 @@ app.post('/signup', (req, res)=> {
     // }
 
     // let sql=`insert into users(username , password) values('${req.body.uname}', '${req.body.pwd}')`
-    var sql = "INSERT INTO users (username, password) VALUES ('sachin', '321sachin')";  
+    var sql = `INSERT INTO users VALUES ('${req.body.uname}', '${req.body.pwd}')`;  
     db.query(sql,(error, result)=>{
           if(error){
             console.log(error)
@@ -59,7 +59,7 @@ app.post('/signup', (req, res)=> {
           }
     })
 })
-db.end()
+// db.end()
 
 app.listen(process.env.PORT||port,  () => {
   console.log(`Example app listening on ${port} port`)
