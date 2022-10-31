@@ -35,10 +35,48 @@ db.connect((error)=>{
 
 const port = 3000
 
-app.get('/signup', (req, res) => {
-  res.sendFile(__dirname+'/index.html')
-
+//handling sign
+app.get('/signin', (req, res) => {
+  res.sendFile(__dirname+'/sign_in.html')
+  
 })
+
+app.post('/signin', (req, res)=>{
+  // console.log(req.body)
+  var sql = `SELECT * FROM users where username='${req.body.uname}'`;  
+  db.query(sql,(error, result)=>{
+        if(error){
+          console.log(error)
+          res.send('failed to fetch')
+        }else{
+          console.log(result)
+          // res.send('fectched successfully')
+          if(result.length==0){
+            res.send('you are not a user')
+          }else{
+            res.send(`${req.body.uname} logged in`)
+          }
+        }
+  })
+})
+
+
+
+app.get('/getdata', (req, res) => {
+  var sql = `SELECT * FROM users`;  
+  db.query(sql,(error, result)=>{
+        if(error){
+          console.log(error)
+          res.send('failed to fetch')
+        }else{
+          console.log(result)
+          // res.send('fectched successfully')
+          res.send(result)
+        }
+  })
+})
+
+
 
 app.post('/signup', (req, res)=> {
      console.log(req.body)
