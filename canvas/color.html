@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <script>
+      let canvas = document.getElementsByTagName("canvas")[0];
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+
+      let context = canvas.getContext("2d");
+
+      // context.fillStyle="pink"
+      //  for rectangle  and can be changed before fill rectangle
+
+      // context.beginPath();
+      // context.moveTo(0, 0);
+      // context.lineTo(300, 100);
+      // context.lineTo(100, 100);
+      // context.strokeStyle = "green";
+      // context.stroke();
+
+      // context.beginPath();
+      // context.arc(300, 300, 30, 0, Math.PI * 2, false);
+      // context.strokeStyle = "blue";
+      // context.stroke();
+
+      //best
+      function me(i){
+          for (let i = 0; i < 10; i++) {
+          let x=Math.random()*256
+          let y=Math.random()*256
+          let z=Math.random()*256
+          context.beginPath();
+          context.arc(x, y, 30, 0, Math.PI * 2, false);
+          context.strokeStyle = `rgb(${x},${y},${i})`;
+          context.stroke();
+        }
+      }
+      let i=1;
+      let stop=setInterval(()=>{
+        me(i);
+        if(i==257){
+          clearInterval(stop)
+        }
+      },100*i++)
+       
+      // for (let i = 0; i < 1000; i++) {
+      //   let x1=Math.random()*1000
+      //   let y1=Math.random()*1000
+      //   let x=Math.random()*256
+      //   let y=Math.random()*256
+      //   let z=Math.random()*256
+      //   context.beginPath();
+      //   context.arc(x1, y1, 30, 0, Math.PI * 2, false);
+      //   context.strokeStyle = `rgb(${x},${y},${z})`;
+      //   context.stroke();
+      // }
+    </script>
+  </body>
+</html>
