@@ -1,0 +1,22 @@
+.text-centre {
+  text-align: center;
+}
+.flex-all-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-all-left {
+  display: flex;
+  align-items: centre;
+  justify-content: flex-start;
+}
+.flex-all-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.font-ballo {
+  font-family: "Baloo 2", cursive;
+}

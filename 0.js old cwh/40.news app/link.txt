@@ -1,0 +1,3 @@
+https://newsapi.org/v2/everything?q=Apple&from=2022-10-06&sortBy=popularity&apiKey=5e2c60b89d534646b67f980899fc655f
+
+https://newsapi.org/docs/get-started

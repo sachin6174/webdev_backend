@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+    <!-- div#container -->
+    <div id="container">
+        <!-- ul>li*5 -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+
+    <script >
+
+        // element selectors:
+
+        // document.getElementById() --> get the element by id --> gebi
+            let container=document.getElementById("container");
+            container.style.background="pink";
+            container.append(document.createElement("p"));
+            let p=container.getElementsByTagName("p");// retuns array
+            p[0].innerHTML="sachin";
+
+            // access any property using element.style.property=value;
+            // to maupulate inner html use element.innerHTMLl="<p>sachin</p>" or text 
+
+        // document.getElementsByClassName() --> get the elements by class name in array
+
+
+
+    </script>
+</body>
+</html>

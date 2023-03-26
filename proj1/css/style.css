@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+footer {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: black;
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+header {
+  background-color: black;
+  height: 8vh;
+}
+
+header nav ul li {
+  list-style: none;
+}
+header > nav > ul > li > a {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-family: "Baloo 2", cursive;
+  height: 18px;
+}
+.left-space {
+  min-height: calc(50vh);
+}

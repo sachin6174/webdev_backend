@@ -1,0 +1,4 @@
+to run the file need to inatall node js which is a js engine like browser console (v8 in chrome)
+and open power shell in the same folder where js file is located and type :
+
+node filename.js

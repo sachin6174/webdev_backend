@@ -1,0 +1,18 @@
+/* h1,p {
+    font-size: 100px;
+    content:"sachin";
+    height: 10px ;
+    width: 1px;
+    padding: 10px;
+    border: 10px;
+    margin: 10px;
+    ek ke uper ek mast
+} */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

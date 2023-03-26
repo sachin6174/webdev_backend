@@ -1,0 +1,5 @@
+! +enter to get basic snippit of html structure,
+Lorem100+enter to get 100 word lorem text
+run in live server 
+click right button of mouse<<run in live server
+ctrl+z to not overflow the text
