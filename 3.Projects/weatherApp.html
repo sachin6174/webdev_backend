@@ -47,6 +47,8 @@
             f = f.toFixed(2);
             div.innerHTML = `The temperature of ${city} is ${c} in degree celcius
                 and ${f} in degree and ${temperature} in kelvin`;
+          }).catch(()=>{
+              div.innerHTML = `City not found`;
           });
 
         // let str = JSON.stringify(sachin);
