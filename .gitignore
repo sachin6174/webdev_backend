@@ -7,3 +7,4 @@
 /4.node-server/node_modules
 */.vscode
 *.DS_Store
+*/.vscode
