@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.product-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+}
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #B12704;
+  margin-bottom: 10px;
+}
+
+.ratings {
+  color: #FFA500;
+  margin-bottom: 10px;
+}
+
+.ratings i {
+  margin-right: 5px;
+}
+
+.buy-now-btn {
+  background-color: #f0c14b;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-now-btn:hover {
+  background-color: #e2b04a;
+}
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610438235354-a6ae5528385c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXBwbGUlMjBhaXJwb2RzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Product Image">
+        <div class="product-info">
+          <h3>Apple AirPods with Charging Case</h3>
+          <p class="price">$129.00</p>
+          <div class="ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <span>(4,542 ratings)</span>
+          </div>
+          <button class="buy-now-btn">Buy Now</button>
+        </div>
+      </div>
+</body>
+</html>
